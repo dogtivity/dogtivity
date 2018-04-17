@@ -37,7 +37,7 @@ class Reminder extends Component {
         opacity: [0, 0.4, 0],
         r: [20, 32, 20],
         duration: 600,
-        offset: '+=500',
+        offset: '+=1000',
         easing: 'easeOutBack'
       })
       .add({
@@ -135,7 +135,7 @@ class Reminder extends Component {
         opacity: [0, 0.4, 0],
         r: [20, 32, 20],
         duration: 600,
-        offset: '+=700',
+        offset: '+=1500',
         easing: 'easeOutBack'
       })
       .add({
@@ -193,6 +193,12 @@ class Reminder extends Component {
           cEl.innerHTML = pointCounters.week.c;
           dEl.innerHTML = pointCounters.week.d;
         }
+      })
+      .add({
+        targets: '#tasksEnd',
+        opacity: [0, 0.25],
+        offset: '+=2000',
+        duration: 1000
       });
   };
 
@@ -349,6 +355,7 @@ class Reminder extends Component {
             <tspan x="84" y="415">A</tspan>
           </text>
         </g>
+        <rect id="tasksEnd" x="0" y="0" width="375" height="667" fill="#3A405A" />
       </Device>
     );
   }

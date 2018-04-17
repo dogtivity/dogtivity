@@ -56,7 +56,7 @@ class Reminder extends Component {
         opacity: [0, 0.4, 0],
         r: [20, 32, 20],
         duration: 600,
-        offset: '+=800',
+        offset: '+=2200',
         easing: 'easeOutBack'
       })
       .add({
@@ -118,7 +118,7 @@ class Reminder extends Component {
         opacity: [0, 0.4, 0],
         r: [20, 32, 20],
         duration: 600,
-        offset: '+=1000',
+        offset: '+=5000',
         easing: 'easeOutBack'
       })
       .add({
@@ -142,7 +142,7 @@ class Reminder extends Component {
         opacity: [0, 0.4 ,0],
         r: [20, 32 ,20],
         duration: 600,
-        offset: '+=1000',
+        offset: '+=4000',
         easing: 'easeOutBack'
       })
       .add({
@@ -191,6 +191,12 @@ class Reminder extends Component {
         easing: 'easeOutBack',
         offset: '-=300',
         duration: 800
+      })
+      .add({
+        targets: '#reminderEnd',
+        opacity: [0, 0.25],
+        offset: '+=5000',
+        duration: 1000
       });
   };
 
@@ -408,6 +414,7 @@ class Reminder extends Component {
               <path d="M276.736,548.316 C273.92,548.316 272,546.268 272,542.86 C272,539.452 273.92,537.5 276.736,537.5 C279.552,537.5 281.472,539.468 281.472,542.86 C281.472,546.268 279.552,548.316 276.736,548.316 Z M276.736,546.284 C278.16,546.284 279.056,544.956 279.056,542.86 C279.056,540.78 278.16,539.532 276.736,539.532 C275.312,539.532 274.416,540.78 274.416,542.86 C274.416,544.956 275.312,546.284 276.736,546.284 Z M283.44,548.124 L283.44,537.692 L285.792,537.692 L285.792,541.964 L285.856,541.964 L288.96,537.692 L291.552,537.692 L288.4,541.852 L292.128,548.124 L289.552,548.124 L287.008,543.724 L285.792,545.324 L285.792,548.124 L283.44,548.124 Z" id="OK" fill="#FFFFFF"></path>
             </g>
           </g>
+          <rect id="reminderEnd" x="0" y="0" width="375" height="667" fill="#3A405A" />
         </g>
       </Device>
     );

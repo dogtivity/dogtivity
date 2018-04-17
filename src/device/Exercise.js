@@ -33,6 +33,7 @@ class Exercise extends Component {
         targets: '#exerciseTouch1',
         opacity: [0, 0.4 ,0],
         r: [20, 32 ,20],
+        offset: '+=1000',
         duration: 600,
         easing: 'easeOutBack'
       })
@@ -79,24 +80,24 @@ class Exercise extends Component {
         strokeDashoffset: [anime.setDashoffset, 0],
         offset: '-=400',
         easing: 'easeInOutQuad',
-        duration: 4000
+        duration: 10000
       })
       .add({
         targets: '#exerciseRouteMarker',
         translateX: path('x'),
         translateY: path('y'),
-        offset: '-=4000',
+        offset: '-=10000',
         easing: 'easeInOutQuad',
-        duration: 4000
+        duration: 10000
       })
       .add({
         targets: exerciseCounters,
         length: {value: [0, 2.5], round: 20},
         time: [0, 36],
         round: 1,
-        offset: '-=4000',
+        offset: '-=10000',
         easing: 'easeInOutQuad',
-        duration: 4000,
+        duration: 10000,
         update: function() {
           let lengthEl = document.querySelector('#exerciseCountersLength .value');
           lengthEl.innerHTML = exerciseCounters.length;
@@ -109,7 +110,7 @@ class Exercise extends Component {
         opacity: [0, 0.4 ,0],
         r: [20, 32, 20],
         duration: 600,
-        offset: '+=400',
+        offset: '+=800',
         easing: 'easeOutBack'
       })
       .add({
@@ -393,6 +394,12 @@ class Exercise extends Component {
         opacity: [0, 1],
         offset: '-=150',
         duration: 400
+      })
+      .add({
+        targets: '#exerciseEnd',
+        opacity: [0, 0.25],
+        offset: '+=2000',
+        duration: 1000
       });
   };
 
@@ -1491,6 +1498,8 @@ class Exercise extends Component {
             </g>
           </g>
         </g>
+        
+        <rect id="exerciseEnd" x="0" y="0" width="375" height="667" fill="#3A405A" />
       </Device>
     );
   }
