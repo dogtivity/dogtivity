@@ -2,7 +2,7 @@
   "name": "turre",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://dogtivity.github.io/app",
+  "homepage": "http://dogtivity.github.io/dogtivity",
   "dependencies": {
     "animejs": "^2.2.0",
     "gh-pages": "^1.1.0",
