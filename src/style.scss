@@ -1,0 +1,112 @@
+$c-1: #3A405A;
+
+body {
+  margin: 0;
+  padding: 0;
+  font: normal 300 100%/1.25 'Source Sans Pro', sans-serif;
+  color: $c-1;
+}
+
+input, textarea, button {
+  font: inherit;
+}
+
+h1, h2, h3, h4 {
+  font: normal 400 100%/1 'Chewy', sans-serif;
+  margin: 0;
+}
+
+h1 { font-size: 9em; }
+h2 { font-size: 3em; }
+
+header {
+  background: right bottom / cover no-repeat url('/img/hero.jpg') #4ECDC4;
+  color: white;
+  height: 60vh;
+  text-align: center;
+  p { @extend .leading; }
+}
+
+.start {
+  text-align: center;
+  padding: 4em 0;
+}
+
+.leading {
+  font-size: 1.25em;
+}
+
+.container {
+  &-wrapper {
+    display: table;
+    width: 100%;
+    max-width: 50em;
+    margin: auto;
+    height: 100%;
+    padding: 2em 0;
+    box-sizing: border-box;
+  }
+  display: table-row;
+  &-inner {
+    vertical-align: middle;
+    display: table-cell;
+    padding: 2em;
+    position: relative;
+  }
+}
+
+.play {
+  position: absolute;
+  display: block;
+  width: 6em;
+  height: 6em;
+  bottom: -1em;
+  left: -1em;
+  border: 0.25em solid #4ECDC4;
+  background: transparentize(#FFFFFF, 0.25);
+  border-radius: 50%;
+  color: #4ECDC4;
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+    background: transparentize(#FFFFFF, 0.1);
+  }
+  section:nth-child(odd) & {
+    left: auto;
+    right: -1em;
+    background: transparentize(#4ECDC4, 0.25);
+    color: #FFFFFF;
+    border: 0.25em solid #FFFFFF;
+    &:hover {
+      background: transparentize(#4ECDC4, 0.1);
+    }
+  }
+}
+
+section:nth-child(odd) {
+  background: #4ECDC4;
+}
+
+.device {
+  height: 1/2 * 100vh;
+  float: left;
+  transform: rotate(2deg) scale(1.2);
+  section:nth-child(odd) & {
+    transform: rotate(-2deg) scale(1.2);
+  }
+}
+
+form {
+  display: none;
+  ul {
+    list-style: none;
+    padding: 0;
+    span {
+      display: inline-block;
+      padding-left: 1em;
+    }
+    label + input {
+      margin-left: 1em;
+    }
+  }
+}
